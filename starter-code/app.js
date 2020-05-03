@@ -31,7 +31,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-
+  function multiply(a, b) { //eslint-disable-line
+    var x = a * b;
+    var multiplyString = 'The product of ' + a + ' and ' + b + ' is ' + x + '.';
+    return [x,multiplyString];
+  }
+  multiply (5,9);
 // Here is the test for multiply(); uncomment it to run it
 testMultiply(5,9);
 
