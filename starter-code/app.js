@@ -10,11 +10,11 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
   var add = a + b;
-  var string = 'The sum of ' + a + ' and ' + b + ' is ' + add + '.';
+  var string = 'The sum of ' + a + ' and ' + b + ' is ' + add + ' . ';
   return [add, string];
 }
 
-sum (5,9);
+sum (4,7);
 
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
@@ -31,12 +31,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-  function multiply(a, b) { //eslint-disable-line
-    var x = a * b;
-    var multiplyString = 'The product of ' + a + ' and ' + b + ' is ' + x + '.';
-    return [x,multiplyString];
-  }
-  multiply (5,9);
+  var x = a * b;
+  var multiplyString = 'The product of ' + a + ' and ' + b + ' is ' + x + ' . ';
+  return [x,multiplyString];
+}
+multiply (5,9);
 // Here is the test for multiply(); uncomment it to run it
 testMultiply(5,9);
 
@@ -55,11 +54,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+  var multiplyTwice = multiply(multiply(a, b)[0], c);
+  var sumTwice =  sum(sum(a, b)[0], c);
+  var addString = a + ' and '+ b + ' and ' + c + ' sum to ' + sumTwice[0];
+  var sumString = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiplyTwice[0];
+  return [sumTwice[0], multiplyTwice[0], addString, sumString];
 }
+sumAndMultiply(4,7,5);
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -76,9 +80,12 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 // var testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) { //eslint-disable-line
-
-}
+// function sumArray(sumArr) { //eslint-disable-line
+// varSumArray = sum(sum(a, b)[0], c);
+// numberArray = [2,3,4];
+// var sumArrayString = a[0] + b[1] + c[2] + ' was passed in as an array of numbers, and ' + d + 'is their sum';
+//   return [sumArraySum, sumArrayString];
+// }
 
 // Here is the test for sumArray(); uncomment it to run it
 
